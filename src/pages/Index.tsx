@@ -1,11 +1,26 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { CursorBlobs } from '@/components/CursorBlobs';
+import { Navbar } from '@/components/Navbar';
+import { HeroSection } from '@/components/HeroSection';
+import { ProjectsSection } from '@/components/ProjectsSection';
+import { AchievementsSection } from '@/components/AchievementsSection';
+import { TechSection } from '@/components/TechSection';
+import { Footer } from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="relative">
+      <CursorBlobs />
+      <Navbar />
+      <HeroSection />
+      <ProjectsSection />
+      <AchievementsSection />
+      <TechSection />
+      <Footer />
+
+      {/* Screen reader accessibility */}
+      <div className="sr-only">
+        This page is a one-page resume with stacked sections: hero, projects, achievements, tech.
+        Use keyboard navigation and anchors to jump sections.
       </div>
     </div>
   );
