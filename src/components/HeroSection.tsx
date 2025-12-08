@@ -6,19 +6,15 @@ const RESUME_URL = '/resume.pdf';
 export function HeroSection() {
   const cursorX = useMotionValue(0);
   const cursorY = useMotionValue(0);
-  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
     const move = (e: MouseEvent) => {
       cursorX.set(e.clientX);
       cursorY.set(e.clientY);
     };
-    const onScroll = () => setScrollY(window.scrollY);
     window.addEventListener('mousemove', move);
-    window.addEventListener('scroll', onScroll, { passive: true });
     return () => {
       window.removeEventListener('mousemove', move);
-      window.removeEventListener('scroll', onScroll);
     };
   }, [cursorX, cursorY]);
 
@@ -48,22 +44,44 @@ export function HeroSection() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+          className="flex flex-col md:flex-row gap-12 items-center justify-center"
         >
-          <div>
+          {/* Photo */}
+          <motion.div variants={itemVariants} className="relative">
+            <motion.div
+              whileHover={{ scale: 1.02, rotateY: 5 }}
+              transition={{ type: 'spring', stiffness: 200 }}
+              className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden glass-strong shadow-2xl ring-4 ring-primary/30"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+                alt="Advait Gajewar"
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+            {/* Glow effect behind photo */}
+            <div
+              className="absolute -inset-4 rounded-full opacity-40 blur-2xl -z-10"
+              style={{ background: 'linear-gradient(135deg, hsl(174 72% 46% / 0.5), hsl(168 80% 42% / 0.3))' }}
+            />
+          </motion.div>
+
+          {/* Name and Intro */}
+          <div className="text-center md:text-left">
             <motion.h1
               variants={itemVariants}
               style={{ x: titleX, y: titleY }}
-              className="text-4xl md:text-6xl font-display font-extrabold leading-tight tracking-tight max-w-xl"
+              className="text-4xl md:text-6xl font-display font-extrabold leading-tight tracking-tight"
             >
-              I build{' '}
-              <span className="gradient-text">fluid, motion-driven</span>{' '}
-              interfaces
+              Advait Gajewar
             </motion.h1>
-            <motion.p variants={itemVariants} className="mt-6 text-muted-foreground max-w-xl text-lg">
-              A one-page hyperfluid resume with projects, achievements, tech stack and a downloadable CV — designed for speed, motion and delight.
+            <motion.p variants={itemVariants} className="mt-2 text-xl md:text-2xl gradient-text font-semibold">
+              Frontend Developer • UI Motion • WebGL
             </motion.p>
-            <motion.div variants={itemVariants} className="mt-8 flex gap-4 items-center flex-wrap">
+            <motion.p variants={itemVariants} className="mt-4 text-muted-foreground max-w-md text-lg">
+              I build fluid, motion-driven interfaces designed for speed, motion, and delight.
+            </motion.p>
+            <motion.div variants={itemVariants} className="mt-8 flex gap-4 items-center justify-center md:justify-start flex-wrap">
               <a href="#projects">
                 <motion.button
                   whileHover={{ scale: 1.02 }}
@@ -84,43 +102,18 @@ export function HeroSection() {
               </a>
             </motion.div>
           </div>
-
-          <motion.div variants={itemVariants} className="relative flex justify-center items-center">
-            <motion.div
-              className="w-[300px] md:w-[380px] h-[380px] rounded-3xl glass-strong shadow-2xl flex items-center justify-center"
-              style={{ y: scrollY * -0.03 }}
-              whileHover={{ rotateY: 6, rotateX: -4, scale: 1.02 }}
-              transition={{ type: 'spring', stiffness: 200 }}
-            >
-              <div className="p-8 text-center">
-                <div className="text-sm text-muted-foreground uppercase tracking-wider">Latest Projects</div>
-                <div className="mt-4 font-display font-semibold text-xl">Smart Waste Management</div>
-                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-                  Linked lists + BSTs to model and prioritize city dustbins. Lightweight demo and charts.
-                </p>
-                <div className="mt-6 flex gap-4 justify-center">
-                  <a href="#projects" className="text-xs text-primary hover:underline">
-                    Explore
-                  </a>
-                  <a href="#tech" className="text-xs text-primary hover:underline">
-                    Tech stack
-                  </a>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Glowing accent */}
-            <div
-              className="absolute -bottom-8 right-6 w-32 h-32 rounded-full opacity-50 blur-3xl animate-pulse-glow"
-              style={{ background: 'linear-gradient(90deg, hsl(270 84% 60%), hsl(330 81% 60%))' }}
-            />
-            <div
-              className="absolute -top-4 -left-4 w-20 h-20 rounded-full opacity-40 blur-2xl animate-float"
-              style={{ background: 'hsl(191 91% 50% / 0.5)' }}
-            />
-          </motion.div>
         </motion.div>
       </div>
+
+      {/* Glowing accents */}
+      <div
+        className="absolute bottom-20 right-10 w-32 h-32 rounded-full opacity-50 blur-3xl animate-pulse-glow"
+        style={{ background: 'linear-gradient(90deg, hsl(174 72% 46%), hsl(168 80% 42%))' }}
+      />
+      <div
+        className="absolute top-20 left-10 w-20 h-20 rounded-full opacity-40 blur-2xl animate-float"
+        style={{ background: 'hsl(186 76% 35% / 0.5)' }}
+      />
     </section>
   );
 }

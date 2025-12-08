@@ -24,7 +24,7 @@ export function CursorBlobs() {
         style={{
           x: useTransform(smoothX, (v) => v - 210),
           y: useTransform(smoothY, (v) => v - 210),
-          background: 'linear-gradient(135deg, hsl(239 84% 67% / 0.6), hsl(330 81% 60% / 0.45))',
+          background: 'linear-gradient(135deg, hsl(174 72% 46% / 0.6), hsl(168 80% 42% / 0.45))',
         }}
       />
       <motion.div
@@ -32,7 +32,7 @@ export function CursorBlobs() {
         style={{
           x: useTransform(smoothX, (v) => v - 350),
           y: useTransform(smoothY, (v) => v - 250),
-          background: 'linear-gradient(90deg, hsl(191 91% 50% / 0.25), hsl(330 81% 60% / 0.2))',
+          background: 'linear-gradient(90deg, hsl(186 76% 35% / 0.25), hsl(174 72% 46% / 0.2))',
         }}
       />
     </>
