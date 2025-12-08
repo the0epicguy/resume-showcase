@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
 import { Mail, Github, Linkedin, Twitter } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const RESUME_URL = '/resume.pdf';
+const LINKEDIN_URL = 'https://linkedin.com/in/yourprofile';
 
 export function Footer() {
   return (
@@ -29,30 +31,43 @@ export function Footer() {
                 Download Resume
               </motion.button>
             </a>
-            <a
-              href="mailto:advait@example.com"
+            <Link
+              to="/contact"
               className="px-6 py-3 rounded-lg glass text-sm font-medium hover:bg-muted/20 transition-colors flex items-center gap-2"
             >
               <Mail className="w-4 h-4" />
               Contact
-            </a>
+            </Link>
           </div>
 
           <div className="mt-8 flex justify-center gap-4">
-            {[
-              { icon: Github, href: '#' },
-              { icon: Linkedin, href: '#' },
-              { icon: Twitter, href: '#' },
-            ].map(({ icon: Icon, href }) => (
-              <motion.a
-                key={Icon.displayName}
-                href={href}
-                whileHover={{ scale: 1.1, y: -2 }}
-                className="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-muted/30 transition-colors"
-              >
-                <Icon className="w-5 h-5 text-muted-foreground" />
-              </motion.a>
-            ))}
+            <motion.a
+              href="https://github.com/yourusername"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.1, y: -2 }}
+              className="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-muted/30 transition-colors"
+            >
+              <Github className="w-5 h-5 text-muted-foreground" />
+            </motion.a>
+            <motion.a
+              href={LINKEDIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.1, y: -2 }}
+              className="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-muted/30 transition-colors"
+            >
+              <Linkedin className="w-5 h-5 text-muted-foreground" />
+            </motion.a>
+            <motion.a
+              href="https://twitter.com/yourusername"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.1, y: -2 }}
+              className="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-muted/30 transition-colors"
+            >
+              <Twitter className="w-5 h-5 text-muted-foreground" />
+            </motion.a>
           </div>
         </motion.div>
 
@@ -64,7 +79,7 @@ export function Footer() {
       {/* Ambient glow */}
       <div
         className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] rounded-full opacity-20 blur-3xl pointer-events-none"
-        style={{ background: 'linear-gradient(90deg, hsl(239 84% 67%), hsl(330 81% 60%))' }}
+        style={{ background: 'linear-gradient(90deg, hsl(174 72% 46%), hsl(168 80% 42%))' }}
       />
     </footer>
   );
