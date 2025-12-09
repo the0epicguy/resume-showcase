@@ -5,7 +5,7 @@ const RESUME_URL = '/resume.pdf';
 const LINKEDIN_URL = 'https://www.linkedin.com/in/advait-gajewar/';
 
 const navItems = [
-  { label: 'Home', href: '/' },
+  { label: 'Home', href: '/#hero' },
   { label: 'Projects', href: '/#projects' },
   { label: 'Achievements', href: '/#achievements' },
   { label: 'Tech', href: '/#tech' },
