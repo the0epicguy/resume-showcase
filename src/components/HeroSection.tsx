@@ -94,7 +94,7 @@ export function HeroSection() {
               }} whileTap={{
                 scale: 0.98
               }} className="px-6 py-3 rounded-lg gradient-primary text-foreground text-sm font-semibold shadow-lg hover:shadow-2xl transition-shadow">
-                  Download CV
+                  Download Resume 
                 </motion.button>
               </a>
             </motion.div>
