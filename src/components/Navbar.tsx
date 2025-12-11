@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 const RESUME_URL = '/resume.pdf';
 const LINKEDIN_URL = 'https://www.linkedin.com/in/advait-gajewar/';
+const GITHUB_URL = 'https://github.com/the0epicguy/';
 
 const navItems = [
   { label: 'Home', href: '/#hero' },
@@ -11,6 +12,7 @@ const navItems = [
   { label: 'Tech', href: '/#tech' },
   { label: 'Contact', href: '/contact' },
   { label: 'LinkedIn', href: LINKEDIN_URL, external: true },
+  { label: 'GitHub', href: GITHUB_URL, external: true },
 ];
 
 export function Navbar() {
