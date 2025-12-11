@@ -4,22 +4,30 @@ const projects = [
   {
     title: 'Smart Waste Management',
     description: 'Linked lists + BSTs to model city dustbins. Real-time priority system with visualizations.',
-    tags: ['React', 'D3.js', 'Node.js'],
+    tags: ['C', 'GTK', 'MSYS'],
+    repo: 'https://github.com/the0epicguy/Smart-Waste-Management-System',
+    live: null,
   },
   {
     title: 'Interactive Portfolio',
     description: 'WebGL-powered 3D portfolio with smooth scroll and kinetic typography effects.',
     tags: ['Three.js', 'GSAP', 'Framer Motion'],
+    repo: null,
+    live: null,
   },
   {
     title: 'Motion Design System',
     description: 'Comprehensive component library with micro-interactions and fluid animations.',
     tags: ['TypeScript', 'Storybook', 'Tailwind'],
+    repo: '#',
+    live: '#',
   },
   {
     title: 'Real-time Collaboration',
     description: 'Live cursor tracking and multiplayer editing with conflict resolution.',
     tags: ['WebSockets', 'CRDT', 'React'],
+    repo: '#',
+    live: '#',
   },
 ];
 
@@ -87,8 +95,8 @@ export function ProjectsSection() {
                 ))}
               </div>
               <div className="mt-4 flex gap-4 items-center relative z-10">
-                <span className="text-sm text-primary hover:underline cursor-pointer">Live</span>
-                <span className="text-sm text-primary hover:underline cursor-pointer">Repo</span>
+                {project.live && <a href={project.live} target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline cursor-pointer">Live</a>}
+                {project.repo && <a href={project.repo} target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline cursor-pointer">Repo</a>}
               </div>
             </motion.article>
           ))}

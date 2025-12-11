@@ -75,12 +75,6 @@ export function HeroSection() {
             >
               Advait Gajewar
             </motion.h1>
-            <motion.p variants={itemVariants} className="mt-2 text-xl md:text-2xl gradient-text font-semibold">
-              Frontend Developer • UI Motion • WebGL
-            </motion.p>
-            <motion.p variants={itemVariants} className="mt-4 text-muted-foreground max-w-md text-lg">
-              I build fluid, motion-driven interfaces designed for speed, motion, and delight.
-            </motion.p>
             <motion.div variants={itemVariants} className="mt-8 flex gap-4 items-center justify-center md:justify-start flex-wrap">
               <a href="#projects">
                 <motion.button
