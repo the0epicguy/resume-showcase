@@ -11,18 +11,6 @@ const projects = [{
   tags: ['Three.js', 'GSAP', 'Framer Motion'],
   repo: null,
   live: null
-}, {
-  title: 'Motion Design System',
-  description: 'Comprehensive component library with micro-interactions and fluid animations.',
-  tags: ['TypeScript', 'Storybook', 'Tailwind'],
-  repo: '#',
-  live: '#'
-}, {
-  title: 'Real-time Collaboration',
-  description: 'Live cursor tracking and multiplayer editing with conflict resolution.',
-  tags: ['WebSockets', 'CRDT', 'React'],
-  repo: '#',
-  live: '#'
 }];
 export function ProjectsSection() {
   const containerVariants = {

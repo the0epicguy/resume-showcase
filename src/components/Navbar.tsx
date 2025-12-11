@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 
-const RESUME_URL = '/resume.pdf';
+const RESUME_URL = 'https://drive.google.com/file/d/1wx59B3pra-Jxu4qF7Tcl9LMZP41DESpJ/view?usp=sharing';
 const LINKEDIN_URL = 'https://www.linkedin.com/in/advait-gajewar/';
 const GITHUB_URL = 'https://github.com/the0epicguy/';
 
@@ -86,7 +86,7 @@ export function Navbar() {
           );
         })}
         
-        <a href={RESUME_URL} download>
+        <a href={RESUME_URL} target="_blank" rel="noopener noreferrer">
           <motion.button
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.98 }}
