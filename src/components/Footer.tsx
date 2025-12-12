@@ -56,7 +56,7 @@ export function Footer() {
         </motion.div>
 
         <div className="mt-12 text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Advait Gajewar — Built with motion-first design.
+          © 2025 Advait Gajewar
         </div>
       </div>
 
