@@ -27,7 +27,7 @@ export function AboutModal({
           <p>
             I'm a Computer Science Engineering student at COEP Technological University, driven by curiosity and a deep interest in how technology can create real-world impact. I love exploring areas like Artificial Intelligence, Machine Learning, DevOps and Cloud Computing not just for the theory, but for how they can actually make life better or more efficient. I'm especially passionate about building real-world projects that turn ideas into tangible solutions and push me to learn something new every time.
           </p>
-          <p>Outside the tech world, I'm a professional tabla player music keeps me grounded and reminds me to stay creative no matter how technical things get. I'm also passionate about sports; I play football, basketball and badminton often. I never miss a good F1 race or football match. I occasionally unwind with video games too.</p>
+          <p>At my core, I'm someone who enjoys learning, building and experimenting, constantly trying to bridge creativity and logic in everything I do.</p>
           <p>
             At my core, I'm someone who enjoys learning, building and experimenting — constantly trying to bridge creativity and logic in everything I do.
           </p>
