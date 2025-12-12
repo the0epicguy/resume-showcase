@@ -6,6 +6,12 @@ const projects = [{
   repo: 'https://github.com/the0epicguy/Smart-Waste-Management-System',
   live: null
 }, {
+  title: 'Code a Block',
+  description: 'A progressive coding platform teaching Scratch fundamentals, advanced Python and project-based app/game development. This proposed website design showcases the platform\'s offerings with responsive UI components.',
+  tags: ['HTML', 'CSS', 'JavaScript', 'Responsive UI'],
+  repo: 'https://github.com/the0epicguy/Codeablock',
+  live: 'https://codeablock.com'
+}, {
   title: 'Interactive Portfolio',
   description: 'WebGL-powered 3D portfolio with smooth scroll and kinetic typography effects.',
   tags: ['Three.js', 'GSAP', 'Framer Motion'],
