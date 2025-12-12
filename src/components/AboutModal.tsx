@@ -29,7 +29,7 @@ export function AboutModal({
           </p>
           <p>Outside the tech world, I’m a professional tabla player music keeps me grounded and reminds me to stay creative no matter how technical things get. I’m also passionate about sports; I play football, basketball, and badminton often. I never miss a good F1 race or football match. I occasionally unwind with video games too.</p>
           <p>
-            At my core, I'm someone who enjoys learning, building and experimenting — constantly trying to bridge creativity and logic in everything I do.
+            At my core, I'm someone who enjoys learning, building and experimenting constantly trying to bridge creativity and logic in everything I do.
           </p>
         </motion.div>
       </DialogContent>
