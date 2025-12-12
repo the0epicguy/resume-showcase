@@ -1,7 +1,11 @@
 import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
 import { useEffect, useState } from 'react';
-const RESUME_URL = '/resume.pdf';
+import { AboutModal } from './AboutModal';
+
+const RESUME_URL = 'https://drive.google.com/file/d/1wx59B3pra-Jxu4qF7Tcl9LMZP41DESpJ/view?usp=sharing';
+
 export function HeroSection() {
+  const [aboutOpen, setAboutOpen] = useState(false);
   const cursorX = useMotionValue(0);
   const cursorY = useMotionValue(0);
   useEffect(() => {
@@ -55,20 +59,26 @@ export function HeroSection() {
         <motion.div variants={containerVariants} initial="hidden" animate="visible" className="flex flex-col md:flex-row gap-12 items-center justify-center">
           {/* Photo */}
           <motion.div variants={itemVariants} className="relative">
-            <motion.div whileHover={{
-            scale: 1.02,
-            rotateY: 5
-          }} transition={{
-            type: 'spring',
-            stiffness: 200
-          }} className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden glass-strong shadow-2xl ring-4 ring-primary/30">
-              <img alt="Advait Gajewar" src="/lovable-uploads/21fb14eb-010b-477b-a74f-59b3fc83ec00.png" className="w-full h-full object-cover border-0 rounded-none" />
+            <motion.div 
+              whileHover={{
+                scale: 1.02,
+                rotateY: 5
+              }} 
+              transition={{
+                type: 'spring',
+                stiffness: 200
+              }} 
+              onClick={() => setAboutOpen(true)}
+              className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden glass-strong shadow-2xl ring-4 ring-primary/30 cursor-pointer"
+            >
+              <img alt="Advait Gajewar - Click to learn more" src="/lovable-uploads/21fb14eb-010b-477b-a74f-59b3fc83ec00.png" className="w-full h-full object-cover border-0 rounded-none" />
             </motion.div>
             {/* Glow effect behind photo */}
             <div className="absolute -inset-4 rounded-full opacity-40 blur-2xl -z-10" style={{
-            background: 'linear-gradient(135deg, hsl(174 72% 46% / 0.5), hsl(168 80% 42% / 0.3))'
-          }} />
+              background: 'linear-gradient(135deg, hsl(174 72% 46% / 0.5), hsl(168 80% 42% / 0.3))'
+            }} />
           </motion.div>
+          <AboutModal open={aboutOpen} onOpenChange={setAboutOpen} />
 
           {/* Name and Intro */}
           <div className="text-center md:text-left">
@@ -88,12 +98,12 @@ export function HeroSection() {
                   View Projects
                 </motion.button>
               </a>
-              <a href={RESUME_URL} download>
+              <a href={RESUME_URL} target="_blank" rel="noopener noreferrer">
                 <motion.button whileHover={{
-                scale: 1.02
-              }} whileTap={{
-                scale: 0.98
-              }} className="px-6 py-3 rounded-lg gradient-primary text-foreground text-sm font-semibold shadow-lg hover:shadow-2xl transition-shadow">
+                  scale: 1.02
+                }} whileTap={{
+                  scale: 0.98
+                }} className="px-6 py-3 rounded-lg gradient-primary text-foreground text-sm font-semibold shadow-lg hover:shadow-2xl transition-shadow">
                   Download Resume 
                 </motion.button>
               </a>
