@@ -110,7 +110,7 @@ export function TechSection() {
       }} className="mt-16">
           <h3 className="text-xl font-display font-semibold">Continuous Learning</h3>
           <p className="text-muted-foreground mt-3 max-w-2xl">
-            Currently exploring WebGPU, advanced animation techniques with GSAP, and building accessible design systems that prioritize motion and micro-interactions.
+            Currently exploring WebGPU, advanced animation techniques with GSAP and building accessible design systems that prioritize motion and micro-interactions.
           </p>
         </motion.div>
       </div>
