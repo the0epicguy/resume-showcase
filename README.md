@@ -1,73 +1,96 @@
-# Welcome to your Lovable project
+# Resume Showcase
 
-## Project info
+A modern, interactive personal resume website built with **React**, **TypeScript**, **Vite**, and **TailwindCSS**.  
+This project provides a fast, responsive, and elegant way to present your resume, projects, and achievements online.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Features
 
-## How can I edit this code?
+- **Interactive UI:** Smooth animations, hover effects, and transitions for an engaging experience.  
+- **Responsive Design:** Fully optimized for desktop, tablet, and mobile devices.  
+- **Dynamic Sections:** Modular components for Hero, Projects, Skills, Achievements, and About sections.  
+- **Lightweight Performance:** Powered by Vite for lightning-fast builds and optimized delivery.  
+- **Customizable Styling:** Easily update colors, fonts, and layout using TailwindCSS and component-based design.  
+- **Deploy-Ready:** Works seamlessly with GitHub Pages, Vercel, or Netlify.
 
-There are several ways of editing your application.
+## Tech Stack
 
-**Use Lovable**
+- **Framework:** React (with TypeScript)
+- **Build Tool:** Vite
+- **Styling:** TailwindCSS
+- **UI Components:** ShadCN/UI and custom-built React components
+- **Package Manager:** npm or bun
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+Make sure you have the following installed:
+- [Node.js](https://nodejs.org/) (v18 or higher)
+- npm or bun
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Installation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/resume-showcase.git
 
-Follow these steps:
+# Navigate into the project folder
+cd resume-showcase
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+# Install dependencies
+npm install
+# or
+bun install
 ```
 
-**Edit a file directly in GitHub**
+### Development
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+To start the local development server:
 
-**Use GitHub Codespaces**
+```bash
+npm run dev
+# or
+bun dev
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Open your browser and visit [http://localhost:5173](http://localhost:5173).
 
-## What technologies are used for this project?
+### Build for Production
 
-This project is built with:
+```bash
+npm run build
+# or
+bun run build
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+The production build will be located in the `dist` folder.
 
-## How can I deploy this project?
+### Preview Production Build
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+```bash
+npm run preview
+```
 
-## Can I connect a custom domain to my Lovable project?
+## Customization
 
-Yes, you can!
+You can customize the content and visuals easily:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+- **Profile Details:** Update the data and text content in components under `src/components`.  
+- **Theme Colors & Fonts:** Modify `tailwind.config.ts` for styling preferences.  
+- **Resume PDF:** Replace `public/resume.pdf` with your own file.  
+- **Assets:** Update images and icons inside the `public` folder.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## Deployment
+
+Deploy easily on:
+
+- [Vercel](https://vercel.com/)
+- [Netlify](https://www.netlify.com/)
+- [GitHub Pages](https://pages.github.com/)
+
+Run a production build and follow your hosting provider’s instructions.
+
+## License
+
+This project is licensed under the MIT License.  
+You are free to modify, distribute, and use this project for personal or commercial purposes.
