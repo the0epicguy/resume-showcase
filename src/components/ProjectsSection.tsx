@@ -82,7 +82,7 @@ export function ProjectsSection() {
                   </span>)}
               </div>
               <div className="mt-4 flex gap-4 items-center relative z-10">
-                {project.live}
+                {project.live && <a href={project.live} target="_blank" rel="noopener noreferrer" className="px-3 py-1.5 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-colors">Live Demo</a>}
                 {project.repo && <a href={project.repo} target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline cursor-pointer">Repo</a>}
               </div>
             </motion.article>)}
