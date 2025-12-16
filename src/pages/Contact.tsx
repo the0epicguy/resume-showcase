@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Navbar } from '@/components/Navbar';
 import { CursorBlobs } from '@/components/CursorBlobs';
 
-const LINKEDIN_URL = 'linkedin.com/in/advait-gajewar';
+const LINKEDIN_URL = 'https://linkedin.com/in/advait-gajewar';
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -100,7 +100,7 @@ export default function Contact() {
               className="mt-12 flex justify-center gap-4"
             >
               <a
-                href="linkedin.com/in/advait-gajewar"
+                href="https://linkedin.com/in/advait-gajewar"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-4 py-2 rounded-lg glass hover:bg-muted/30 transition-colors"
