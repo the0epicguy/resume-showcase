@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Navbar } from '@/components/Navbar';
 import { CursorBlobs } from '@/components/CursorBlobs';
 
-const LINKEDIN_URL = 'https://linkedin.com/in/yourprofile';
+const LINKEDIN_URL = 'linkedin.com/in/advait-gajewar';
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -63,7 +63,7 @@ export default function Contact() {
                   value={formData.email}
                   onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
                   className="w-full px-4 py-3 rounded-lg glass bg-card/50 border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors"
-                  placeholder="your@email.com"
+                  placeholder="advaitgajewar@gmail.com"
                   required
                 />
               </div>
@@ -100,7 +100,7 @@ export default function Contact() {
               className="mt-12 flex justify-center gap-4"
             >
               <a
-                href={LINKEDIN_URL}
+                href="linkedin.com/in/advait-gajewar"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-4 py-2 rounded-lg glass hover:bg-muted/30 transition-colors"
@@ -109,14 +109,14 @@ export default function Contact() {
                 <span className="text-sm">LinkedIn</span>
               </a>
               <a
-                href="mailto:advait@example.com"
+                href="mailto:advaitgajewar@gmail.com"
                 className="flex items-center gap-2 px-4 py-2 rounded-lg glass hover:bg-muted/30 transition-colors"
               >
                 <Mail className="w-5 h-5 text-primary" />
                 <span className="text-sm">Email</span>
               </a>
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/the0epicguy"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-4 py-2 rounded-lg glass hover:bg-muted/30 transition-colors"
