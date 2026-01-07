@@ -22,6 +22,18 @@ const achievements = [
     year: '2025',
   },
   {
+    icon: GraduationCap,
+    title: 'Planning a Machine Learning Project',
+    description: 'Certification by Amazon Web Services (AWS).',
+    year: '2025',
+  },
+  {
+    icon: GraduationCap,
+    title: 'AWS Foundations: Machine Learning Basics',
+    description: 'Certification by Amazon Web Services (AWS).',
+    year: '2025',
+  },
+  {
     icon: Award,
     title: 'An Introduction to Social Work Basics',
     description: 'Certification by Alison.',
