@@ -4,7 +4,7 @@ import { useState } from "react";
 import { AboutModal } from "./AboutModal";
 
 const RESUME_URL =
-  "https://drive.google.com/file/d/1wx59B3pra-Jxu4qF7Tcl9LMZP41DESpJ/view?usp=sharing";
+  "https://drive.google.com/file/d/1C5ZzIM016jpBHf3LcJXgZ295-NRuauYm/view?usp=sharing";
 const LINKEDIN_URL = "https://www.linkedin.com/in/advait-gajewar/";
 const GITHUB_URL = "https://github.com/the0epicguy/";
 
