@@ -1,5 +1,11 @@
 import { motion } from 'framer-motion';
 const projects = [{
+  title: 'EchoPath',
+  description: 'Microsoft Imagine Cup 2026 submission by COEP Tech. An infrastructure-free, voice-guided indoor navigation assistant for visually impaired users. Combines Android sensor fusion with Microsoft Azure AI for real-time navigation without GPS or beacons.',
+  tags: ['Android', 'Azure AI', 'Sensor Fusion', 'Accessibility'],
+  repo: 'https://github.com/anushb-codes/EchoPath',
+  live: null
+}, {
   title: 'Smart Waste Management',
   description: 'Linked lists + BSTs to model city dustbins. Real-time priority system with visualizations.',
   tags: ['C', 'GTK', 'MSYS'],
