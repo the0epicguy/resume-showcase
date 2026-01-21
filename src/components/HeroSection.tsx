@@ -2,7 +2,7 @@ import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { AboutModal } from './AboutModal';
 
-const RESUME_URL = 'https://drive.google.com/file/d/1wx59B3pra-Jxu4qF7Tcl9LMZP41DESpJ/view?usp=sharing';
+const RESUME_URL = 'https://drive.google.com/file/d/1C5ZzIM016jpBHf3LcJXgZ295-NRuauYm/view?usp=sharing';
 
 export function HeroSection() {
   const [aboutOpen, setAboutOpen] = useState(false);
