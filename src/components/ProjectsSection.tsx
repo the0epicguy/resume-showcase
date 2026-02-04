@@ -54,7 +54,7 @@ const projects: Project[] = [
   },
   {
     title: 'Attendance Tracker',
-    description: 'A system to track and manage attendance records efficiently.',
+    description: 'A clean, ready-to-run Python Attendance Tracker application. This project runs locally on any machine and works seamlessly in IDEs like PyCharm. A system to track and manage attendance records efficiently.',
     tags: ['Python', 'Automation'],
     repo: 'https://github.com/the0epicguy/Attendance_Tracker',
     live: null,
@@ -63,7 +63,7 @@ const projects: Project[] = [
   },
   {
     title: 'Polymarket Bot',
-    description: 'Automated trading bot for Polymarket prediction markets.',
+    description: 'Automated trading bot for Polymarket prediction markets that implements Phase 3 of a backtesting workflow on 1-minute BTC price data, detects “violating candles” where price expands ≥1×ATR from the 15-minute open, and flags failures when price reverts and crosses back through the open within the same window.',
     tags: ['Python', 'Trading', 'Automation'],
     repo: 'https://github.com/the0epicguy/Polymarket_bot_phase3',
     live: null,
