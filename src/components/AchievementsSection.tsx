@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { Award, Trophy, Star, GraduationCap, Music, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Award, Trophy, Star, GraduationCap, Music, ChevronLeft, ChevronRight, Code } from 'lucide-react';
 import { useEffect, useState, useCallback } from 'react';
 
 const achievements = [
@@ -10,46 +10,83 @@ const achievements = [
     year: '2025',
   },
   {
-    icon: Star,
-    title: 'Generative AI Explained',
-    description: 'Certification by Nvidia.',
-    year: '2025',
+    icon: Code,
+    title: 'PCEP™ - Certified Entry-Level Python Programmer',
+    description: 'Certification by Python Institute®.',
+    year: 'Jan 2026',
   },
   {
     icon: GraduationCap,
-    title: 'An Even Easier Introduction to CUDA',
-    description: 'Certification by Nvidia.',
-    year: '2025',
+    title: 'Building a Machine Learning Ready Organization',
+    description: 'Certification by Amazon Web Services (AWS).',
+    year: 'Jan 2026',
   },
   {
     icon: GraduationCap,
     title: 'Planning a Machine Learning Project',
     description: 'Certification by Amazon Web Services (AWS).',
-    year: '2025',
+    year: 'Dec 2025',
   },
   {
     icon: GraduationCap,
     title: 'AWS Foundations: Machine Learning Basics',
     description: 'Certification by Amazon Web Services (AWS).',
-    year: '2025',
+    year: 'Dec 2025',
+  },
+  {
+    icon: Star,
+    title: 'Generative AI Explained',
+    description: 'Certification by NVIDIA.',
+    year: 'Oct 2025',
+  },
+  {
+    icon: GraduationCap,
+    title: 'An Even Easier Introduction to CUDA',
+    description: 'Certification by NVIDIA.',
+    year: 'Oct 2025',
   },
   {
     icon: Award,
     title: 'An Introduction to Social Work Basics',
     description: 'Certification by Alison.',
-    year: '2025',
+    year: 'Sep 2025',
   },
   {
     icon: Music,
-    title: 'Prarambhik - Madhyama Purna [Tabla]',
+    title: 'Madhyama Purna [Tabla]',
     description: 'Certification by Akhil Bharatiya Gandharva Mahavidyalaya Mandal.',
-    year: '2016 - 2023',
+    year: 'Apr 2023',
+  },
+  {
+    icon: Music,
+    title: 'Madhyama Pratham [Tabla]',
+    description: 'Certification by Akhil Bharatiya Gandharva Mahavidyalaya Mandal.',
+    year: 'Apr 2022',
+  },
+  {
+    icon: Music,
+    title: 'Praveshika Purna [Tabla]',
+    description: 'Certification by Akhil Bharatiya Gandharva Mahavidyalaya Mandal.',
+    year: 'Apr 2018',
+  },
+  {
+    icon: Music,
+    title: 'Praveshika Pratham [Tabla]',
+    description: 'Certification by Akhil Bharatiya Gandharva Mahavidyalaya Mandal.',
+    year: 'Apr 2017',
+  },
+  {
+    icon: Music,
+    title: 'Prarambhik [Tabla]',
+    description: 'Certification by Akhil Bharatiya Gandharva Mahavidyalaya Mandal.',
+    year: 'Apr 2016',
   },
 ];
 
 export function AchievementsSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(1);
+  const [isPaused, setIsPaused] = useState(false);
 
   const nextSlide = useCallback(() => {
     setDirection(1);
@@ -62,9 +99,10 @@ export function AchievementsSection() {
   }, []);
 
   useEffect(() => {
+    if (isPaused) return;
     const interval = setInterval(nextSlide, 10000);
     return () => clearInterval(interval);
-  }, [nextSlide]);
+  }, [nextSlide, isPaused]);
 
   const variants = {
     enter: (dir: number) => ({
@@ -107,7 +145,11 @@ export function AchievementsSection() {
           </p>
         </motion.div>
 
-        <div className="mt-12 relative flex items-center justify-center">
+        <div
+          className="mt-12 relative flex items-center justify-center"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
           {/* Previous Button */}
           <motion.button
             onClick={prevSlide}
