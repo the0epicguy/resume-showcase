@@ -53,6 +53,15 @@ const projects: Project[] = [
     featured: true,
   },
   {
+    title: 'AI Document Intelligence System',
+    description: 'AI-powered document intelligence system that analyzes PDFs and generates structured insights using LLMs.',
+    tags: ['Python', 'LLM', 'API', 'Parsing'],
+    repo: 'https://github.com/the0epicguy/AI-Document-Intelligence-System',
+    live: null,
+    status: 'completed',
+    featured: true,
+  },
+  {
     title: 'Attendance Tracker',
     description: 'A clean, ready-to-run Python Attendance Tracker application. This project runs locally on any machine and works seamlessly in IDEs like PyCharm. A system to track and manage attendance records efficiently.',
     tags: ['Python', 'Automation'],
