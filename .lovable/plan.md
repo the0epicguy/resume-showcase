@@ -1,127 +1,35 @@
 
 
-# Projects Section Redesign: Tabbed Categories + Featured Expandable
+# Update Achievements: Add New Certifications + Pause on Hover
 
-A combined approach that organizes projects into **Completed** and **In Progress** tabs, with featured projects shown prominently and a "View All" expansion for additional projects.
+## Current vs New
 
----
+**Already exists** (will update years to match your dates):
+- Hackathon Finalist (keep as-is)
+- Generative AI Explained - NVIDIA (Oct 2025)
+- An Even Easier Introduction to CUDA - NVIDIA (Oct 2025)
+- Planning a Machine Learning Project - AWS (Dec 2025)
+- AWS Foundations: Machine Learning Basics - AWS (Dec 2025)
+- An Introduction to Social Work Basics - Alison (Sep 2025)
 
-## How It Will Work
+**Split existing combined Tabla entry** into individual certs:
+- Prarambhik (Apr 2016)
+- Praveshika Pratham (Apr 2017)
+- Praveshika Purna (Apr 2018)
+- Madhyama Pratham (Apr 2022)
+- Madhyama Purna (Apr 2023)
 
-### Visual Layout
+**Brand new additions**:
+- PCEP - Certified Entry-Level Python Programmer - Python Institute (Jan 2026)
+- Building a Machine Learning Ready Organization - AWS (Jan 2026)
 
-```text
-┌─────────────────────────────────────────────────────────┐
-│  Projects                                               │
-│  Interactive showcase of recent work...                 │
-│                                                         │
-│  ┌──────────────┐ ┌──────────────┐                      │
-│  │  Completed   │ │ In Progress  │  ← Tabbed navigation │
-│  └──────────────┘ └──────────────┘                      │
-│                                                         │
-│  Featured Projects (2x2 grid)                           │
-│  ┌─────────────┐ ┌─────────────┐                        │
-│  │ EchoPath    │ │ Smart Waste │  ← First 4 shown      │
-│  └─────────────┘ └─────────────┘                        │
-│  ┌─────────────┐ ┌─────────────┐                        │
-│  │ Code a Block│ │ Portfolio   │                        │
-│  └─────────────┘ └─────────────┘                        │
-│                                                         │
-│        ┌─────────────────────┐                          │
-│        │   View All (12)     │  ← Expands to show more │
-│        └─────────────────────┘                          │
-└─────────────────────────────────────────────────────────┘
-```
+## Pause on Hover
 
-### User Experience
+Add `isPaused` state; pause the auto-rotate interval on `mouseEnter`, resume on `mouseLeave`.
 
-1. **Default View**: Shows 4 featured projects in a 2x2 grid
-2. **Tabs**: Switch between "Completed" and "In Progress" projects
-3. **View All Button**: Expands to show remaining projects with smooth animation
-4. **Collapse Button**: Returns to featured-only view
+## File Changes
 
----
-
-## Data Structure Changes
-
-Each project will have a new `status` field:
-
-| Field | Values | Purpose |
-|-------|--------|---------|
-| `status` | `'completed'` or `'in-progress'` | Determines which tab it appears in |
-| `featured` | `true` or `false` | Whether shown in initial view |
-
----
-
-## Implementation Steps
-
-### Step 1: Update Project Data Structure
-
-Add `status` and `featured` fields to existing projects:
-- EchoPath: `status: 'in-progress'`, `featured: true`
-- Smart Waste Management: `status: 'completed'`, `featured: true`
-- Code a Block: `status: 'completed'`, `featured: true`
-- Interactive Portfolio: `status: 'in-progress'`, `featured: true`
-
-### Step 2: Add Tab Navigation
-
-Import and use the existing Radix UI Tabs component with custom styling to match the glass aesthetic of the site.
-
-### Step 3: Implement Expandable Logic
-
-- Add state to track if "View All" is expanded
-- Filter projects by status and featured status
-- Show first 4 featured projects by default
-- "View All" button reveals remaining projects with animation
-
-### Step 4: Add Animations
-
-- Smooth height transition when expanding/collapsing
-- Staggered fade-in for newly revealed projects
-- Tab transition animations using Framer Motion
-
----
-
-## Files to Modify
-
-| File | Changes |
-|------|---------|
-| `src/components/ProjectsSection.tsx` | Complete rewrite with tabs, expansion logic, and new data structure |
-
----
-
-## Future-Proofing
-
-This structure makes it easy to:
-- Add new projects with just a data entry (no layout changes needed)
-- Mark projects as in-progress and move to completed later
-- Feature specific projects by setting `featured: true`
-- Scale to dozens of projects without cluttering the page
-
----
-
-## Technical Details
-
-### Dependencies Used
-- `@radix-ui/react-tabs` - Already installed
-- `framer-motion` - Already installed for animations
-- `lucide-react` - For expand/collapse icons
-
-### Component Structure
-```text
-ProjectsSection
-├── Tabs (Radix UI)
-│   ├── TabsList
-│   │   ├── TabsTrigger "Completed"
-│   │   └── TabsTrigger "In Progress"
-│   └── TabsContent (for each tab)
-│       ├── Featured Grid (4 projects)
-│       ├── AnimatePresence (for expansion)
-│       │   └── Remaining Projects Grid
-│       └── View All / Collapse Button
-```
-
-### State Management
-- `activeTab`: Current tab ("completed" or "in-progress")
-- `isExpanded`: Whether showing all projects or just featured
+| File | Change |
+|------|--------|
+| `src/components/AchievementsSection.tsx` | Update achievements array (split Tabla, add 2 new certs, fix years), add hover-to-pause |
 
