@@ -65,7 +65,7 @@ const projects: Project[] = [
     title: 'CipherForge',
     description: 'A modular encryption and decryption suite built with Java and JavaFX, featuring secure text and file encryption through a scalable desktop application architecture.',
     tags: ['Java', 'JavaFX', 'FXML', 'CSS'],
-    repo: null,
+    repo: 'https://github.com/tanushrijadhav/encryption-decryption-oopd-java',
     live: null,
     status: 'completed',
     featured: true,
