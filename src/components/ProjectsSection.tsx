@@ -62,6 +62,15 @@ const projects: Project[] = [
     featured: true,
   },
   {
+    title: 'CipherForge',
+    description: 'A modular encryption and decryption suite built with Java and JavaFX, featuring secure text and file encryption through a scalable desktop application architecture.',
+    tags: ['Java', 'JavaFX', 'FXML', 'CSS'],
+    repo: null,
+    live: null,
+    status: 'completed',
+    featured: true,
+  },
+  {
     title: 'Attendance Tracker',
     description: 'A clean, ready-to-run Python Attendance Tracker application. This project runs locally on any machine and works seamlessly in IDEs like PyCharm. A system to track and manage attendance records efficiently.',
     tags: ['Python', 'Automation'],
