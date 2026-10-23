@@ -71,6 +71,15 @@ const projects: Project[] = [
     featured: true,
   },
   {
+    title: 'F1 2026 Racing Simulator',
+    description: 'A browser-based 3D Formula 1 racing game built in 48 hours with the help of Gemini Argon. Features 3D car models, Grand Prix circuits, multiple camera angles, driving mechanics, AI opponents, and race systems. This is the first iteration, and feedback and bug reports are welcome! 3D Model Creator: Tyler Dave (https://sketchfab.com/Tyler_Dave).',
+    tags: ['React', 'Three.js', 'JavaScript', 'Vite', 'Game Development'],
+    repo: null,
+    live: 'https://f1-game-the0epicguy.vercel.app/',
+    status: 'completed',
+    featured: true,
+  },
+  {
     title: 'Attendance Tracker',
     description: 'A clean, ready-to-run Python Attendance Tracker application. This project runs locally on any machine and works seamlessly in IDEs like PyCharm. A system to track and manage attendance records efficiently.',
     tags: ['Python', 'Automation'],
